@@ -3,8 +3,9 @@ import './style.css'
 import Trash from '../../assets/DELETAR.png'
 import Edit from '../../assets/EDITAR.png'
 import api from '../../services/api'
+import { Link } from 'react-router-dom'
 
-function Home() {
+function Cadastro() {
   const [users, setUsers] = useState([])
   const [editingUser, setEditingUser] = useState(null) // Estado para armazenar o usuário em edição
   const [editedName, setEditedName] = useState("")
@@ -79,7 +80,7 @@ function Home() {
         email: editedEmail
       })
       getUsers()
-      setEditingUser(null) // Fecha o formulário de edição
+      setEditingUser(null) 
     } catch (error) {
       console.error("Erro ao editar usuário:", error)
       alert('Erro ao editar usuário')
@@ -90,13 +91,17 @@ function Home() {
     getUsers()
   }, [])
 
+
   return (
     <div className='container'>
+      <div className='Login'>
+        <button><Link to='/Login' className='linkLogin'>Login</Link></button>
+      </div>
       <form>
         <h1>Cadastro de Usuários</h1>
-        <input name='Nome' type='text' placeholder='Nome' ref={inputName} />
-        <input name='Idade' type='number' placeholder='Idade' ref={inputAge} />
-        <input name='Email' type='email' placeholder='Email' ref={inputEmail} />
+        <input name='Nome' type='text' placeholder='Nome' ref={inputName} autoComplete="off"/>
+        <input name='Idade' type='number' placeholder='Idade' ref={inputAge} autoComplete="off"/>
+        <input name='Email' type='email' placeholder='Email' ref={inputEmail} autoComplete="off"/>
         <button type='button' onClick={() => createUsers()}>CADASTRAR</button>
       </form>
 
@@ -132,4 +137,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Cadastro

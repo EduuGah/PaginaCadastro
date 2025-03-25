@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+h1 {
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+}
+
+.Cadastro{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;  
+    height: auto; 
+    padding: 10px;
+    color: white;
+
+    & button{
+        background: linear-gradient(180deg, #063f5b7b, #006f2c7a) ;
+        width: 90px;
+        height: 90px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 18px;
+        font-style: bold;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        color: inherit; 
+
+    }
+}
+
+.linkCadastro{
+    text-decoration: none;
+    color: inherit; 
+}
